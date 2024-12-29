@@ -65,5 +65,5 @@ module "ASG" {
   # public_subnet_2_id = module.network.public_subnet_2_id
   private_subnet_1_id = module.network.private_subnet_1_id
   private_subnet_2_id = module.network.private_subnet_2_id
-
+}
   
