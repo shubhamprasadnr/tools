@@ -15,9 +15,9 @@ resource "aws_instance" "my_instance" {
   key_name = var.key_name
 
   # Ensure the instance is running (if stopped, it will start)
-  lifecycle {
-    create_before_destroy = true
-  }
+ # lifecycle {
+  #  create_before_destroy = true
+  #}
   
   tags ={
     Name = "Kafka"
@@ -35,9 +35,9 @@ resource "aws_instance" "pvtinstance" {
   availability_zone =var.private_subnet_1_az
   key_name      = var.key_name
 
-lifecycle {
-    create_before_destroy = true
-  }
+#lifecycle {
+    #create_before_destroy = true
+  #}
 
   tags = {
     Name = "myinstance"
@@ -59,9 +59,9 @@ resource "aws_instance" "instance" {
   availability_zone =var.public_subnet_1_az_id# Specify the desired availability zone
   key_name = var.key_name
   # Ensure the instance is running (if stopped, it will start)
-  lifecycle {
-    create_before_destroy = true
-  }
+  #lifecycle {
+    #create_before_destroy = true
+  #}
   
   tags ={
     Name = "pubinstance"
